@@ -219,7 +219,7 @@ describe("issue", () => {
 
     async function issue(amount: string, vaultName: string, autoExecute: boolean) {
         let initialBalance = await treasuryAPI.balancePolkaBTC(api.createType("AccountId", alice.address));
-        const blocksToMine = 3;
+        const blocksToMine = 6;
         keyring = new Keyring({ type: "sr25519" });
         const vault = keyring.addFromUri("//" + vaultName);
 
